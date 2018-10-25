@@ -15,4 +15,11 @@ class MoviesController extends Controller
         return view('movies.index', ['movies' => $movies]);
         
     }
+
+    public function show($id)
+    {
+        $movie = Movie::findOrFail($id);
+
+        return view('movies.show', ['movie' => $movie]);
+    }
 }

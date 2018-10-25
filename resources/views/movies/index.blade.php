@@ -1,26 +1,28 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
+@extends('layouts.master')
         
-
-        <title>Movies</title>
+@section('title')
+    Movies
+@endsection
+        
    
-    </head>
-    <body>
-        <h1>Movies</h1>
-        <ul>
-            <li>
-            @foreach($movies as $movie) 
-            <a href="/movies/{{ $movie->title}}">      
-               <h2>{{ $movie->title }}</h2>
-            </a>    
+   
+@section('content')    
+    <h1>Movies</h1>
+    <ul>
+        <li>
+        @foreach($movies as $movie) 
+        <h2>
+        <a href="/movies/{{ $movie->id}}">      
+        {{ $movie->title }}
+        </a> 
+        </h2>   
 
-               <p>{{ $movie->storyline }}</p>
-            
-            @endforeach
-            </li>
-        </ul>   
+        <p>{{ $movie->storyline }}</p>
+        
+        @endforeach
+        </li>
+    </ul>   
+@endsection
 
-    </body>
-</html>
+
+
