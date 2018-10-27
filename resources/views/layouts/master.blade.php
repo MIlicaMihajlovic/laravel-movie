@@ -22,13 +22,6 @@
         <div class="col-md-8 blog-main">
           @yield('content')
         
-        <a href="/movies">
-          Movies 
-        </a>
-        
-        <a href="/add">
-          Add movie
-        </a>  
 
         </div><!-- /.blog-main -->
 
@@ -39,6 +32,8 @@
       </div><!-- /.row -->
 
     </main><!-- /.container -->
+
+    </div>
 
     <footer class="blog-footer">
       @include('layouts.partials.footer')

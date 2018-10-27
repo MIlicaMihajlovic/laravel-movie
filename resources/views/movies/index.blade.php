@@ -9,18 +9,20 @@
 @section('content')    
     <h1>Movies</h1>
     <ul>
-        <li>
         @foreach($movies as $movie) 
-        <h2>
-        <a href="/movies/{{ $movie->id}}">      
-        {{ $movie->title }}
-        </a> 
-        </h2>   
+            <li>
+                <div class="blog-post">
+                    <h2 class="blog-post-title">
+                        <a href="/movies/{{ $movie->id}}">      
+                        {{ $movie->title }}
+                        </a> 
+                    </h2>   
 
-        <p>{{ $movie->storyline }}</p>
-        
+                        <p>{{ $movie->storyline }}</p>
+            
+                </div>    
+            </li>
         @endforeach
-        </li>
     </ul>   
 @endsection
 
