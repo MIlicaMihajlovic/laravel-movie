@@ -34,6 +34,21 @@
                 @endforeach    
             </ul>
         @endif
+
+        <h4>Add comment</h4>
+        <form method="POST" action="/movies/{{ $movie->id }}/comments">
+
+    {{ csrf_field() }}
+
+    <div class="form-group">
+      <textarea name="content" type="text" class="form-control" placeholder="Enter comment"></textarea>
+      @include('layouts.partials.error-message', ['field' => 'content']) 
+    </div>
+
+    
+      <button type="submit" class="btn btn-primary">Submit</button>
+       
+  </form>
         
          
 @endsection

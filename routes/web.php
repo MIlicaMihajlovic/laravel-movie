@@ -12,6 +12,8 @@
 */
 
 
+Route::get('/', 'MoviesController@index');
+
 
 Route::prefix('/movies')->group(function(){
 
@@ -20,7 +22,12 @@ Route::prefix('/movies')->group(function(){
     Route::get('/{id}', 'MoviesController@show');
     Route::get('/', 'MoviesController@index');
 
-    
+    Route::prefix('/{movieId}/comments')->group(function(){
+
+        Route::post('/', 'CommentsController@store');
+    });
 
 });
+
+
 
