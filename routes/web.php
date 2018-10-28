@@ -11,8 +11,16 @@
 |
 */
 
-Route::get('/create', 'MoviesController@create');
 
-Route::get('/movies', 'MoviesController@index');
 
-Route::get('/movies/{id}', 'MoviesController@show');
+Route::prefix('/movies')->group(function(){
+
+    Route::get('/create', 'MoviesController@create');
+    Route::post('/', 'MoviesController@store');
+    Route::get('/{id}', 'MoviesController@show');
+    Route::get('/', 'MoviesController@index');
+
+    
+
+});
+

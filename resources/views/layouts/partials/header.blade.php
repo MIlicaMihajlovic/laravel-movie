@@ -3,7 +3,7 @@
       <a class="text-muted" href="/movies">Movies</a>
     </div>
     <div class="col-4 text-center">
-      <a class="blog-header-logo text-dark" href="/create">Add movies</a>
+      <a class="blog-header-logo text-dark" href="/movies/create">Add movies</a>
     </div>
     <div class="col-4 d-flex justify-content-end align-items-center">
       <a class="text-muted" href="#">
