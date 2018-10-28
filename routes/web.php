@@ -29,5 +29,7 @@ Route::prefix('/movies')->group(function(){
 
 });
 
+Route::get('/genres/{genre}', 'GenresController@show');
+
 
 

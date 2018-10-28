@@ -11,10 +11,11 @@
 @section('content')  
 
     <h1>Movies</h1>
-    
         
         <h2>{{ $movie->title }}</h2>
+        <a href="/genres/{{$movie->genre}}">
             {{ $movie->genre }}
+        </a>    
 
             {{ $movie->director }}
 
