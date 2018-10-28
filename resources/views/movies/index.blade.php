@@ -8,7 +8,7 @@
    
 @section('content')    
     <h1>Movies</h1>
-    <ul>
+    <ul class="list-unstyled">
         @foreach($movies as $movie) 
             <li>
                 <div class="blog-post">

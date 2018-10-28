@@ -20,6 +20,11 @@ class Movie extends Model
 
     public $timestamps = false;
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
 }
 
 
