@@ -7,9 +7,12 @@ use Illuminate\Http\Request;
 
 class MoviesController extends Controller
 {
+    
+
     public function index()
     {
         
+
         $movies = Movie::all();
 
         return view('movies.index', ['movies' => $movies]);
@@ -42,6 +45,8 @@ class MoviesController extends Controller
         return redirect('/movies');
         
     }
+
+    
 }
 
 

@@ -25,9 +25,7 @@
 
         </div><!-- /.blog-main -->
 
-        <aside class="col-md-4 blog-sidebar">
-          @include('layouts.partials.sidebar')
-        </aside><!-- /.blog-sidebar -->
+        
 
       </div><!-- /.row -->
 
